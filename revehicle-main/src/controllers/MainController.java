@@ -31,17 +31,16 @@ public class MainController {
         this.mainWindow = mainWindow;
         this.loadVehicle = new LoadVehicle();
 
-        ArrayList<Vehicle> vehicleList = this.loadVehicle.load();
-        for(Vehicle vehicle : vehicleList) {
-            this.mainWindow.vehicleModel.addRow(
-                new Object[] {vehicle.ordinal, vehicle.brand, vehicle.year}
-            );
-        }
-
-         
+        initLoad();
+        initText();
+        initDelete();
+        initSave();   
+    }
+    
+    private void initText(){
         //TODO A névtelen metódus tartalmát ki kell szervezni
         //TODO A függvény tartalmát is több részre bontani
-        
+
         this.mainWindow.addButton.addActionListener(event -> {
             System.out.println("Hozzáadás...");
             String ordinal = this.mainWindow.ordinalField.getText();
@@ -50,18 +49,30 @@ public class MainController {
             this.mainWindow.ordinalField.setText("");
             this.mainWindow.brandField.setText("");
             this.mainWindow.yearField.setText("");
-            this.mainWindow.vehicleModel.addRow(
-                new Object[] {ordinal, brand, year}
-            );
+            this.mainWindow.vehicleModel.addRow(new Object[] {ordinal, brand, year});
         });
+    }
+
+    private void initLoad(){
+        ArrayList<Vehicle> vehicleList = this.loadVehicle.load();
+        for(Vehicle vehicle : vehicleList) {
+            this.mainWindow.vehicleModel.addRow(
+                new Object[] {vehicle.ordinal, vehicle.brand, vehicle.year}
+            );
+        }
+    }
+
+    private void initDelete(){
         //TODO: Törlés megvalósítása
         this.mainWindow.delButton.addActionListener(event -> {
             System.out.println("Törlés...");
         });
+    }
+
+    private void initSave(){
         //TODO: Mentés megvalósítása
         this.mainWindow.saveButton.addActionListener(event -> {
             System.out.println("Mentés...");
         });
     }
-    
 }
