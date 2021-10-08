@@ -1,13 +1,17 @@
 /*
  * File: App.java
  * Created Date: 2021-09-24 22:13:27
- * Author: Sallai Andras
- * Github: https://github.com/andteki
+ * Authors:Szűcs Norbert, Rohrbacher Marcel János
+ * Original Author: Sallai Andras
+ * Github: https://github.com/Szucs-Norbert
+ *         https://github.com/Marci971104
+ *         
  * -----
- * Last Modified: 2021-09-24
- * Modified By: Sallai Andras
+ * Last Modified: 2021-10-208
+ * Modified By: Szűcs Norbert, Rohrbacher Marcel János
  * -----
- * Copyright (c) 2021 Sallai Andras
+ * Copyright (c) 2021 Szűcs Norbert, Rohrbacher Marcel János
+ * Group: Szoft II/N
  * 
  * GNU GPL v2
  */
